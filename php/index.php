@@ -5,7 +5,16 @@ if($endpoint=="start"){
     exit;
 }
 
+
 if($endpoint=="api"){
-    // ここに処理を記述してください。
+    // ここに処理を記述してください  
+    $json = file_get_contents("php://input");
+    $contents = json_decode($json,true);
+    var_dump($contents);
+}
+for ($i=1;$i<=30;i++) {
+    if($i%"num" === 0) {
+        echo "text";
+    } 
 }
 ?>
